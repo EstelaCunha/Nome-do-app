@@ -3,9 +3,41 @@ Controle de Versão
          CVS ou Concurrent Version System
       
       O que é ?
+      
        É um sistema de controle de versão que permite que se trabalhe com diversas versões de arquivos organizados em 
        um diretório e localizados local ou remotamente, mantendo-se suas versões antigas e os logs de quem e quando 
        manipulou os arquivos.
       
+      Como funciona ?
+      
+  CVS utiliza uma arquitetura cliente-servidor: um servidor armazena a(s) versão(ões) atuais do projeto e seu histórico,
+  e os clientes se conectam a esse servidor para obter uma cópia completa do projeto, trabalhar nessa cópia e então 
+  devolver suas modificações. Tipicamente, cliente e servidor devem estar conectados por uma rede local de computadores,
+  ou pela Internet, mas o cliente e o servidor podem estar na mesma máquina se a configuração do CVS for feita de maneira a
+  dar acesso a versões e histórico do projeto apenas a usuários locais. O servidor geralmente roda sistema ao estilo Unix,
+  enquanto o cliente CVS pode rodar qualquer sistema operacional.
+  
+  O CVS também pode manter diferentes "estados" do projeto. Por exemplo, uma versão do software pode ser um desses estados,
+  usado para correção de bugs, enquanto outra versão, que está realmente sob desenvolvimento, sofrendo alterações e tendo
+  novas funcionalidades implementadas, forma o outro estado. Ele tamnbém usa compressão delta para armazenar de maneira
+  eficiente diferentes versões de um mesmo arquivo.
+         
+         Terminologia
+         
+   A terminologia do CVS considera um projeto (conjunto de arquivos relacionados) gerenciados pelo CVS como um módulo,
+   que consiste em uma hierarquia de diretórios contendo os arquivos do projeto. Um servidor CVS pode gerenciar diversos 
+   módulos;ele armazena todos os módulos administrados por ele em seu repositório. A cópia do módulo que foi baixada para 
+   um cliente é chamada cópia de trabalho (ou checkout).
+    
+     Exemplos de terminologia do CVS:
+     
+     Commit: envio das modificações feitas pelo usuário ao repositório CVS.
+     Export: é o download de um módulo inteiro a partir de um repositório CVS, sem os arquivos administrativos CVS. 
+     Módulos exportados não ficam sob controle do CVS.
+     Import: geralmente é usado para designar a criação de um módulo inteiro dentro de um repositório CVS através do upload
+     de uma estrutura de diretórios.
+     Branch: é uma ramificação no desenvolvimento, usada para descrever o processo de divisão dos arquivos de um projeto em
+     linhas de desenvolvimento independentes.Podendo servir para teste de uma nova funcionalidade ou para projetos destinados
+     a um cliente específico.
        
       
