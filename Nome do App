@@ -12,3 +12,10 @@ Controle de Versão
   usado para correção de bugs, enquanto outra versão, que está realmente sob desenvolvimento, sofrendo alterações e tendo
   novas funcionalidades implementadas, forma o outro estado. Ele tamnbém usa compressão delta para armazenar de maneira
   eficiente diferentes versões de um mesmo arquivo.
+         
+         Terminologia
+         
+   A terminologia do CVS considera um projeto (conjunto de arquivos relacionados) gerenciados pelo CVS como um módulo,
+   que consiste em uma hierarquia de diretórios contendo os arquivos do projeto. Um servidor CVS pode gerenciar diversos 
+   módulos;ele armazena todos os módulos administrados por ele em seu repositório. A cópia do módulo que foi baixada para 
+   um cliente é chamada cópia de trabalho (ou checkout).
