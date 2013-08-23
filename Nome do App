@@ -1,1 +1,14 @@
 Controle de Versão
+
+  Funcionamento
+  CVS utiliza uma arquitetura cliente-servidor: um servidor armazena a(s) versão(ões) atuais do projeto e seu histórico,
+  e os clientes se conectam a esse servidor para obter uma cópia completa do projeto, trabalhar nessa cópia e então 
+  devolver suas modificações. Tipicamente, cliente e servidor devem estar conectados por uma rede local de computadores,
+  ou pela Internet, mas o cliente e o servidor podem estar na mesma máquina se a configuração do CVS for feita de maneira a
+  dar acesso a versões e histórico do projeto apenas a usuários locais. O servidor geralmente roda sistema ao estilo Unix,
+  enquanto o cliente CVS pode rodar qualquer sistema operacional.
+  
+  O CVS também pode manter diferentes "estados" do projeto. Por exemplo, uma versão do software pode ser um desses estados,
+  usado para correção de bugs, enquanto outra versão, que está realmente sob desenvolvimento, sofrendo alterações e tendo
+  novas funcionalidades implementadas, forma o outro estado. Ele tamnbém usa compressão delta para armazenar de maneira
+  eficiente diferentes versões de um mesmo arquivo.
